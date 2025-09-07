@@ -1,0 +1,114 @@
+/* Handwriting style font */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.cursive-font {
+  font-family: 'Indie Flower', cursive;
+}
+
+/* Lined paper background for journal entries */
+.bg-paper {
+  background: repeating-linear-gradient(
+    #fff,
+    #fff 24px,
+    #f9d5d3 25px
+  );
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+/* Leather cover for first page */
+.cover-page {
+  background: url('https://www.transparenttextures.com/patterns/leather.png'),
+              linear-gradient(135deg, #b3544d, #7a2d28);
+  background-size: cover;
+  color: white;
+  border-radius: 8px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Closing page style */
+.closing-page {
+  background: #f8d7da;
+  border-radius: 8px;
+  border: 3px solid #ff9fb2;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Journal input box styling */
+.journal-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #ff9fb2;
+  outline: none;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.1rem;
+  resize: none;
+  color: #5a2a27;
+}
+
+/* FlipBook page wrapper */
+.page {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Page shadow effect for realism */
+.flipbook-page {
+  background: repeating-linear-gradient(
+    #fff,
+    #fff 24px,
+    #f9d5d3 25px
+  );
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  padding: 1rem;
+  font-family: 'Indie Flower', cursive;
+  color: #5a2a27;
+}
+
+/* Page turn animation */
+.page-turn {
+  animation: pageFlip 0.8s ease;
+  transform-origin: left center;
+}
+
+@keyframes pageFlip {
+  from {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* Slight curl effect on hover */
+.flipbook-page:hover {
+  transform: rotateY(-3deg);
+}
+
+/* Optional: center FlipBook in the page */
+.flipbook-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
